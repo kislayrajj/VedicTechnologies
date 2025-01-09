@@ -24,19 +24,20 @@ const Navbar = () => {
         <AnimatePresence mode="wait">
           {isNavMenuOpen && (
             <motion.div
-              initial={{ opacity: 0, scale: 0.2, x: 300, y: -300 }}
-              animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
-              exit={{ opacity: 0 ,scale: 0.2, x: 300, y: -300}}
+              initial={{ opacity: 0,  y: -500 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 ,  y: -500}}
               transition={{ duration: 0.2 }}
-              className={`absolute top-1 left-1 flex justify-between w-[100vw] h-[90vh] ${
+              className={`absolute top-0 left-0 flex justify-between w-[100vw] h-[100vh] bg-black bg-opacity-95 text-white ${
                 isNavMenuOpen ? " " : ""
               }`}>
-              <div className="text-3xl flex flex-col gap-4 bg-emerald-500 w-1/2 p-12 bg-opacity-80">
+  
+              <div className="text-3xl flex flex-col gap-4  w-1/2 p-12">
                 <div>something</div>
                 <div>something</div>
                 <div>something</div>
               </div>
-              <div className="text-xl flex flex-col gap-4 bg-red-500 bg-opacity-80 w-1/2 p-12">
+              <div className="text-xl flex flex-col gap-4 w-1/2 p-12">
                 <div>Price</div>
                 <div>Services</div>
                 <div>Projects</div>
